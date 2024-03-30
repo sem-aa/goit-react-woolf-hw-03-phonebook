@@ -37,11 +37,9 @@ class App extends Component {
     ) {
       return alert(`${contact.name} contact already exists `);
     }
-    this.setState(prevState => {
-      return {
-        contacts: [...prevState.contacts, contact],
-      };
-    });
+    this.setState(prevState => ({
+      contacts: [...prevState.contacts, contact],
+    }));
   };
 
   filterChange = e => {
